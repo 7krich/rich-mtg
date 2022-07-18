@@ -1,0 +1,23 @@
+{
+  "name": "rich-mtg",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server/server.js",
+    "develop": "concurrently \"cd server && npm run watch\" \"cd client && npm start\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/7krich/rich-mtg.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/7krich/rich-mtg/issues"
+  },
+  "homepage": "https://github.com/7krich/rich-mtg#readme",
+  "dependencies": {
+    "concurrently": "^7.2.2"
+  }
+}
