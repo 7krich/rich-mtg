@@ -19,6 +19,6 @@
   },
   "homepage": "https://github.com/7krich/rich-mtg#readme",
   "dependencies": {
-    "concurrently": "^7.2.2"
+    "concurrently": "^7.3.0"
   }
 }
