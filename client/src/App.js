@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 // import components
 import Nav from './components/Nav';
+import Footer from './components/Footer'
 
 // import pages
 import HomePage from './pages/HomePage';
@@ -49,8 +50,8 @@ function App() {
             element={<NoMatch />} 
           />
         </Routes>
-
       </Router>
+      <Footer />
     </div>
   );
 }

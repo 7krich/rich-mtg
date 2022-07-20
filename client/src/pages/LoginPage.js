@@ -5,7 +5,6 @@ const Login = () => {
     return (
         <main>
             "Login"
-            <Footer />
         </main>
     )
 }

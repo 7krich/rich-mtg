@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 // import { capitalizeFirstLetter } from '../utils/helpers';
 import Hamburger from './Hamburger';
@@ -17,14 +17,45 @@ const Nav = (props) => {
         setHamburgerOpen(!hamburgerOpen)
     }
 
+    const [show, setShow] = useState(true);
+    const [lastScrollY, setLastScrollY] = useState(0);
+  
+    const controlNavbar = () => {
+      if (typeof window !== 'undefined') { 
+        if (window.scrollY > 200) { 
+            // if scroll down hide the navbar
+            setShow(false); 
+        } else { 
+            // if scroll up show the navbar
+            setShow(true);  
+        }
+  
+        // remember current page location to use in the next move
+        setLastScrollY(window.scrollY); 
+      }
+    };
+  
+    useEffect(() => {
+      if (typeof window !== 'undefined') {
+        window.addEventListener('scroll', controlNavbar);
+  
+        // cleanup function
+        return () => {
+          window.removeEventListener('scroll', controlNavbar);
+        };
+      }
+    }, [lastScrollY]);
+
     return(
-        <header className="nav-row">
+        <header className={`active ${show && 'hidden'}`}>
             <nav className="dynamic-nav">
 
                 <div className="nav-box">
-                    <h2 className="title">
-                        RICH SERVICES
-                    </h2>
+                    <a href="/">
+                        <h2 className="title">
+                            RICH SERVICES
+                        </h2>
+                    </a>
                 
                     <div className="nav-row dynamic-flex">
                         {Auth.loggedIn() ? (

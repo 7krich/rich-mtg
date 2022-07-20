@@ -5,7 +5,6 @@ const News = () => {
     return (
         <main>
             "News"
-            <Footer />
         </main>
     )
 }

@@ -5,7 +5,6 @@ const Profile = () => {
     return (
         <main>
             "SignUp"
-            <Footer />
         </main>
     )
 }

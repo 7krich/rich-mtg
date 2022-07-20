@@ -18,6 +18,26 @@ code {
 }
 
 /* nav css */
+.active{
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: row;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  transition: 0.5s linear;
+}
+
+.hidden {
+  height: 4rem;
+  width: 100%;
+  z-index: 40;
+  position: fixed;
+  top: -80px;
+  transition: 0.5s linear;
+}
 
 .dashboard {
   display: flex;
@@ -57,10 +77,10 @@ nav {
   display: flex;
   flex-direction: row;
   min-width: 50%;
-  padding-top: 20px;
+  padding-top: 25px;
   padding-left: 40px;
-  padding-bottom: 20px;
-  padding-right: 20px;
+  padding-bottom: 25px;
+  padding-right: 25px;
   background-color: var(--secondary);
   clip-path: polygon(0 0, 100% 0, 100% 100%, 2.5% 100%);
 }
@@ -83,10 +103,16 @@ nav {
 }
 
 h2, .title {
-  margin: 0;
-  padding: 0;
+  margin: 0 15px 0 0;
+  padding: 0 15px 0 0;
   min-width: 200px;
   color: white;
+  border-right: 2px solid white;
+  text-align: center;
+}
+
+a:link {
+  text-decoration: none;
 }
 
 .nav-link {
@@ -130,3 +156,110 @@ h2, .title {
   transform-origin: 1px;
   transition: all 0.3s linear;
 }
+
+/* HomePage Styles */
+.home-container {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+
+.log-container {
+  width: 42%;
+  border: 8px solid black;
+  border-radius: 50px;
+  margin-top: 50px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.sign-log {
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 75px;
+}
+
+.signup-intro {
+  width: 100%;
+}
+
+.signup-outer {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 70px;
+  margin-bottom: 60px;
+}
+
+/* homepage app styles */
+.app-form-title {
+  text-align: center;
+  font-size: 30px;
+}
+
+.app {
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 75px;
+}
+
+/* Login component styles */
+.flex {
+  display: flex;
+  flex-direction: column;
+}
+
+.login-title {
+  text-align: center;
+  font-size: 60px;
+}
+
+.login-form {
+  padding-bottom: 10px;
+  margin-top: 60px;
+}
+
+.form-input {
+  margin-bottom: 10px;
+  padding-top: 10px;
+  padding-left: 30px;
+}
+
+/* homepage buttons */
+.sub-btn {
+  margin-top: 20px;
+  background-image: linear-gradient(92.88deg, #455EB5 9.16%, #5643CC 43.89%, #673FD7 64.72%);
+  border-radius: 8px;
+  border-style: none;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  cursor: pointer;
+  flex-shrink: 0;
+  font-family: "Inter UI","SF Pro Display",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen,Ubuntu,Cantarell,"Open Sans","Helvetica Neue",sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  height: 4rem;
+  padding: 0 1.6rem;
+  text-align: center;
+  text-shadow: rgba(0, 0, 0, 0.25) 0 3px 8px;
+  transition: all .5s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  font-size: 26px;
+}
+
+.sub-btn:hover {
+  box-shadow: rgba(80, 63, 205, 0.5) 0 1px 30px;
+  transition-duration: .1s;
+}
+
+
+/* media queries */
+@media (min-width: 768px) {
+  .sub-btn {
+    padding: 0 2.6rem;
+  }
+}
+
