@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import Auth from '../utils/auth';
-import { IoIosArrowDown } from "react-icons/io";
 
 import Login from '../components/Login'
 
@@ -59,57 +58,21 @@ const Home = () => {
                     </div>
                 </div>
             </div>
-            <div class="contentDiv">
-                <img class="arrow" src="../assets/images/arrowImage.png" />
+            <div className="contentDiv">
+                <a href="#aboutme">
+                    <img
+                        className="arrow" src={require(`../assets/images/ArrowImage.png`)}
+                        alt="downward arrow"
+                    />
+                </a>
             </div>
-            <div>
+            <div id="aboutme">
                 some content
             </div>
             <div>
                 some content
             </div>
-            <div>
-                some content
-            </div>
-            <div>
-                some content
-            </div>
-            <div>
-                some content
-            </div>
-            <div>
-                some content
-            </div>
-            <div>
-                some content
-            </div>
-            <div>
-                some content
-            </div>
-            <div>
-                some content
-            </div>
-            <div>
-                some content
-            </div>
-            <div>
-                some content
-            </div>
-            <div>
-                some content
-            </div>
-            <div>
-                some content
-            </div>
-            <div>
-                some content
-            </div>
-            <div>
-                some content
-            </div>
-            <div>
-                some content
-            </div>
+
         </main>
     )
 }

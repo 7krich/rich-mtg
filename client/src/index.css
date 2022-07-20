@@ -267,14 +267,15 @@ a:link {
 }
 
 .arrow {
-  animation: bouncing 1s infinite ease-in-out;
+  animation: bouncing 3s ease-in-out;
+  animation-delay: 5s;
+  animation-iteration-count: 3;
   bottom: 0;
   display: block;
-  height: 50px;
   left: 50%;
   margin-left: -25px;
-  position: absolute;
   width: 50px;
+  padding-top: 80px;
 }
 
 
