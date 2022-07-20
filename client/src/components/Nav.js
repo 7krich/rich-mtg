@@ -1,8 +1,15 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 // import { capitalizeFirstLetter } from '../utils/helpers';
-import Hamburger from './Hamburger'
+import Hamburger from './Hamburger';
+import Auth from '../utils/auth';
 
 const Nav = (props) => {
+
+    const logout = event => {
+        event.preventDefault();
+        Auth.logout();
+    };
 
     const [hamburgerOpen, setHamburgerOpen] = useState(false);
 
@@ -12,12 +19,33 @@ const Nav = (props) => {
 
     return(
         <header className="nav-row">
-            <h2>
-                Rich's Mortgage Services
-            </h2>
             <nav className="dynamic-nav">
-                <ul className="nav-row dynamic-flex">
-                </ul>
+
+                <div className="nav-box">
+                    <h2 className="title">
+                        RICH SERVICES
+                    </h2>
+                
+                    <div className="nav-row dynamic-flex">
+                        {Auth.loggedIn() ? (
+                        <>
+                            <Link to="/profile" className="nav-link">Profile</Link>
+                            <Link to="/about" className="nav-link">About</Link>
+                            <a href="/" className="nav-link" onClick={logout}>
+                                Logout
+                            </a>
+                        </>
+                        ) : (
+                        <>
+                            <Link to="/login" className="nav-link">Login</Link>
+                            <Link to="/signup" className="nav-link">Signup</Link>
+                            <Link to="/about" className="nav-link">About</Link>
+                            <Link to="/news" className="nav-link">News</Link>
+                        </>
+                        )}
+                    </div>
+                </div>
+            
 
                 <div className="hamburger" onClick={toggleHamburger}>
                     <Hamburger isOpen={hamburgerOpen}/>

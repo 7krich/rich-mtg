@@ -8,6 +8,7 @@ import Nav from './components/Nav';
 import HomePage from './pages/HomePage';
 import LoginPage from './pages/LoginPage';
 import SignupPage from './pages/SignupPage';
+import ProfilePage from './pages/ProfilePage';
 import AboutPage from './pages/AboutPage';
 import NewsPage from './pages/NewsPage';
 import NoMatch from './pages/NoMatch';
@@ -30,6 +31,10 @@ function App() {
           <Route 
             path="/signup" 
             element={<SignupPage />} 
+          />
+          <Route 
+            path="/profile" 
+            element={<ProfilePage />} 
           />
           <Route 
             path="/about" 
