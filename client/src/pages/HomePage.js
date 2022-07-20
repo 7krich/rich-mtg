@@ -67,7 +67,9 @@ const Home = () => {
                 </a>
             </div>
             <div id="aboutme">
-                some content
+                <div className="personal-photo">
+                    
+                </div>
             </div>
             <div>
                 some content
