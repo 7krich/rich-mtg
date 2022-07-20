@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import Auth from '../utils/auth';
+import { IoIosArrowDown } from "react-icons/io";
 
 import Login from '../components/Login'
 
@@ -27,7 +28,7 @@ const Home = () => {
                 <div className="log-container">
                     <div className="app">
                         <h3 className="app-form-title">
-                            New Application 
+                            Get More Info
                         </h3>
                         <form className="flex app-form">
                             <input
@@ -57,6 +58,9 @@ const Home = () => {
                         </form>
                     </div>
                 </div>
+            </div>
+            <div class="contentDiv">
+                <img class="arrow" src="../assets/images/arrowImage.png" />
             </div>
             <div>
                 some content
