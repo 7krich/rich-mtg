@@ -1,10 +1,12 @@
 {
+  "homepage": "https://github.com/7krich/rich-svc",
   "name": "rich-mtg",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "start": "node server/server.js",
+    "build": "react-scripts build",
     "develop": "concurrently \"cd server && npm run watch\" \"cd client && npm start\"",
     "install": "cd server && npm i && cd ../client && npm i",
     "predeploy": "npm run build",
@@ -19,9 +21,9 @@
   "bugs": {
     "url": "https://github.com/7krich/rich-mtg/issues"
   },
-  "homepage": "https://github.com/7krich/rich-svc",
   "dependencies": {
-    "concurrently": "^7.3.0"
+    "concurrently": "^7.3.0",
+    "react-scripts": "^5.0.1"
   },
   "devDependencies": {
     "gh-pages": "^4.0.0"
