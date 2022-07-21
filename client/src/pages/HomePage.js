@@ -7,11 +7,11 @@ const Home = () => {
 
     return (
         <main>
-            <div className="intro">
+            {/* <div className="intro">
                 <h1>
                     RICH SERVICES - Mortgage Broker
                 </h1>
-            </div>
+            </div> */}
             {/* home form outer container */}
             <div className="home-container">
 
