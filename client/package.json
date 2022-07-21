@@ -1,6 +1,6 @@
 {
   "name": "client",
-  "homepage": "https://github.com/7krich/rich-svc",
+  "homepage": "https://7krich.github.io/rich-svc/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
