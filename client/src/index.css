@@ -161,6 +161,7 @@ a:link {
 /* HomePage Styles */
 .intro {
   text-align: center;
+  padding-bottom: 10px;
 }
 
 h1 {
@@ -311,14 +312,43 @@ a .aboutme {
 
 .arrow {
   animation: bouncing 3s ease-in-out;
-  animation-delay: 5s;
-  animation-iteration-count: 3;
+  animation-delay: 4s;
+  animation-iteration-count: 5;
   bottom: 0;
   display: block;
   left: 50%;
   margin-left: -25px;
   width: 50px;
   padding-top: 2%;
+}
+
+/* about styles */
+.about {
+  display: flex;
+  flex-direction: row;
+}
+
+.about-us {
+  padding-top: 6%;
+  font-size: 26px;
+  width: 50%;
+  margin: auto;
+  text-align: center;
+  font-weight: bold;
+}
+
+.profile-container {
+  width: 40%;
+  margin-right: auto;
+  margin-top: 5%;
+  margin-bottom: auto;
+}
+
+.profile-pic {
+  clip-path: polygon(0 0, 100% 0, 50% 100%, 0 100%);
+  width: 100%;
+  margin-top: 40px;
+  box-shadow: 2px 2px 1cm rgb(46, 46, 46);
 }
 
 /* footer styles */

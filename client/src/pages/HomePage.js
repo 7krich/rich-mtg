@@ -77,141 +77,40 @@ const Home = () => {
                 </div>
             </div>
             <div>
-                some content
-            </div>
-            <div>
-                some content
-            </div>
-            <div>
-                some content
-            </div>
-            <div>
-                some content
-            </div>
-            <div>
-                some content
-            </div>
-            <div>
-                some content
-            </div>
-            <div>
-                some content
-            </div>
-            <div>
-                some content
-            </div>
-            <div>
-                some content
-            </div>
-            <div>
-                some content
-            </div>
-            <div>
-                some content
-            </div>
-            <div>
-                some content
-            </div>
-            <div>
-                some content
-            </div>
-            <div>
-                some content
-            </div>
-            <div>
-                some content
-            </div>
-            <div>
-                some content
-            </div>
-            <div>
-                some content
-            </div>
-            <div>
-                some content
-            </div>
-            <div>
-                some content
-            </div>
-            <div>
-                some content
-            </div>
-            <div>
-                some content
-            </div>
-            <div>
-                some content
-            </div>
-            <div>
-                some content
-            </div>
-            <div>
-                some content
-            </div>
-            <div>
-                some content
-            </div>
-            <div>
-                some content
-            </div>
-            <div>
-                some content
-            </div>
-            <div>
-                some content
-            </div>
-            <div>
-                some content
-            </div>
-            <div>
-                some content
-            </div>
-            <div>
-                some content
-            </div>
-            <div>
-                some content
-            </div>
-            <div>
-                some content
-            </div>
-            <div>
-                some content
-            </div>
-            <div>
-                some content
-            </div>
-            <div>
-                some content
-            </div>
-            <div>
-                some content
-            </div>
-            <div>
-                some content
-            </div>
-            <div>
-                some content
-            </div>
-            <div>
-                some content
-            </div>
-            <div>
-                some content
-            </div>
-            <div>
-                some content
-            </div>
-            <div>
-                some content
-            </div>
-            <div>
-                some content
+                <div className="about">
+                    <div className="profile-container">
+                        <img className="profile-pic"
+                            src={require('../assets/images/portfolioPortrait.jpg')}
+                            alt="Author"
+                        />
+                    </div>
+
+                    <section className="about-us">
+                        <p>
+                            Welcome to Rich Services! With over 5 years of loan origination and underwriting experience we are a broker you can trust.  
+                        </p>
+                        <p>
+                            Purchase, Refinance, Conventional, VA & FHA we are here to make the process quick and painless by letting you know what to expect from first contact to closing.
+                        </p>
+                        <p>
+                            Work with us & we will work for you.
+                        </p>
+                    </section>
+                </div>
             </div>
 
-
-
-
+            <div>
+                <br />
+            </div>
+            <div>
+                <br />
+            </div>
+            <div>
+                <br />
+            </div>
+            <div>
+                <br />
+            </div>
         </main>
     )
 }
