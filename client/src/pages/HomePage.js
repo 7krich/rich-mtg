@@ -7,6 +7,11 @@ const Home = () => {
 
     return (
         <main>
+            <div className="intro">
+                <h1>
+                    RICH SERVICES - Mortgage Broker
+                </h1>
+            </div>
             {/* home form outer container */}
             <div className="home-container">
 
@@ -51,7 +56,7 @@ const Home = () => {
                                 type="email"
                                 id="email"
                             />
-                            <button className="sub-btn" type="submit">
+                            <button className="sub-btn x-pad" type="submit">
                                 Submit
                             </button>
                         </form>

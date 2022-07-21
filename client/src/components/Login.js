@@ -23,7 +23,7 @@ const Login = () => {
                     id="password"
                 />
                 <div className="flex">
-                    <button className="sub-btn log-btn" type="submit">
+                    <button className="sub-btn log-btn x-pad" type="submit">
                         Log In
                     </button>
                 </div>
