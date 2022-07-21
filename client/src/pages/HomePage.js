@@ -68,12 +68,144 @@ const Home = () => {
             </div>
             <div id="aboutme">
                 <div className="personal-photo">
-                    
+
                 </div>
             </div>
             <div>
                 some content
             </div>
+            <div>
+                some content
+            </div>
+            <div>
+                some content
+            </div>
+            <div>
+                some content
+            </div>
+            <div>
+                some content
+            </div>
+            <div>
+                some content
+            </div>
+            <div>
+                some content
+            </div>
+            <div>
+                some content
+            </div>
+            <div>
+                some content
+            </div>
+            <div>
+                some content
+            </div>
+            <div>
+                some content
+            </div>
+            <div>
+                some content
+            </div>
+            <div>
+                some content
+            </div>
+            <div>
+                some content
+            </div>
+            <div>
+                some content
+            </div>
+            <div>
+                some content
+            </div>
+            <div>
+                some content
+            </div>
+            <div>
+                some content
+            </div>
+            <div>
+                some content
+            </div>
+            <div>
+                some content
+            </div>
+            <div>
+                some content
+            </div>
+            <div>
+                some content
+            </div>
+            <div>
+                some content
+            </div>
+            <div>
+                some content
+            </div>
+            <div>
+                some content
+            </div>
+            <div>
+                some content
+            </div>
+            <div>
+                some content
+            </div>
+            <div>
+                some content
+            </div>
+            <div>
+                some content
+            </div>
+            <div>
+                some content
+            </div>
+            <div>
+                some content
+            </div>
+            <div>
+                some content
+            </div>
+            <div>
+                some content
+            </div>
+            <div>
+                some content
+            </div>
+            <div>
+                some content
+            </div>
+            <div>
+                some content
+            </div>
+            <div>
+                some content
+            </div>
+            <div>
+                some content
+            </div>
+            <div>
+                some content
+            </div>
+            <div>
+                some content
+            </div>
+            <div>
+                some content
+            </div>
+            <div>
+                some content
+            </div>
+            <div>
+                some content
+            </div>
+            <div>
+                some content
+            </div>
+
+
+
 
         </main>
     )

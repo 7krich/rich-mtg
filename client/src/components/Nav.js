@@ -22,7 +22,7 @@ const Nav = (props) => {
   
     const controlNavbar = () => {
       if (typeof window !== 'undefined') { 
-        if (window.scrollY > 200) { 
+        if (window.scrollY > 700) { 
             // if scroll down hide the navbar
             setShow(false); 
         } else { 

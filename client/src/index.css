@@ -15,6 +15,7 @@ code {
 :root {
   --secondary: rgb(74, 74, 74);
   --tertiary: rgb(11, 123, 174);
+  --quaternary: rgb(46, 46, 46);
 }
 
 /* nav css */
@@ -81,7 +82,7 @@ nav {
   padding-left: 40px;
   padding-bottom: 25px;
   padding-right: 25px;
-  background-color: var(--secondary);
+  background-color: var(--quaternary);
   clip-path: polygon(0 0, 100% 0, 100% 100%, 2.5% 100%);
 }
 
@@ -172,7 +173,7 @@ a:link {
   margin-right: auto;
   background: white;
   border: 8px solid transparent;
-  box-shadow: rgba(100, 100, 111, 0.448) 0px 7px 29px 0px;
+  box-shadow: rgba(100, 100, 111, 0.72) 0px 7px 29px 0px;
 }
 
 .sign-log {
@@ -191,6 +192,10 @@ a:link {
   margin-right: auto;
   margin-top: 70px;
   margin-bottom: 60px;
+}
+
+a .aboutme {
+  transition-duration: .2s;
 }
 
 /* homepage app styles */
