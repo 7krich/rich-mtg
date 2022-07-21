@@ -8,9 +8,7 @@
     "start": "node server/server.js",
     "build": "react-scripts build",
     "develop": "concurrently \"cd server && npm run watch\" \"cd client && npm start\"",
-    "install": "cd server && npm i && cd ../client && npm i",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "install": "cd server && npm i && cd ../client && npm i"
   },
   "repository": {
     "type": "git",
@@ -22,10 +20,6 @@
     "url": "https://github.com/7krich/rich-mtg/issues"
   },
   "dependencies": {
-    "concurrently": "^7.3.0",
-    "react-scripts": "^5.0.1"
-  },
-  "devDependencies": {
-    "gh-pages": "^4.0.0"
+    "concurrently": "^7.3.0"
   }
 }
