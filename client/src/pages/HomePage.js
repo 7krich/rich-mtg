@@ -1,9 +1,37 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Auth from '../utils/auth';
 
 import Login from '../components/Login'
 
 const Home = () => {
+    const [show, setShow] = useState(true);
+    const [lastScrollY, setLastScrollY] = useState(0);
+  
+    const controlNavbar = () => {
+      if (typeof window !== 'undefined') { 
+        if (window.scrollY < 1050) { 
+            // if scroll down hide the navbar
+            setShow(false); 
+        } else { 
+            // if scroll up show the navbar
+            setShow(true);  
+        }
+  
+        // remember current page location to use in the next move
+        setLastScrollY(window.scrollY); 
+      }
+    };
+  
+    useEffect(() => {
+      if (typeof window !== 'undefined') {
+        window.addEventListener('scroll', controlNavbar);
+  
+        // cleanup function
+        return () => {
+          window.removeEventListener('scroll', controlNavbar);
+        };
+      }
+    }, [lastScrollY]);
 
     return (
         <main>
@@ -86,19 +114,57 @@ const Home = () => {
                     </div>
 
                     <section className="about-us">
-                        <p>
-                            Welcome to Rich Services! With over 5 years of loan origination and underwriting experience we are a broker you can trust.  
-                        </p>
-                        <p>
-                            Purchase, Refinance, Conventional, VA & FHA we are here to make the process quick and painless by letting you know what to expect from first contact to closing.
-                        </p>
-                        <p>
-                            Work with us & we will work for you.
-                        </p>
+                        <div className={`visible ${show && 'hide'}`}>
+                            <p>
+                                Welcome to Rich Services! With over 5 years of loan origination and underwriting experience we are a broker you can trust.  
+                            </p>
+                            <p>
+                                Purchase, Refinance, Conventional, VA & FHA we are here to make the process quick and painless by letting you know what to expect from first contact to closing.
+                            </p>
+                            <p>
+                                Work with us & we will work for you.
+                            </p>
+                        </div>
                     </section>
                 </div>
             </div>
 
+            <div>
+                <br />
+            </div>
+            <div>
+                <br />
+            </div>
+            <div>
+                <br />
+            </div>
+            <div>
+                <br />
+            </div>
+            <div>
+                <br />
+            </div>
+            <div>
+                <br />
+            </div>
+            <div>
+                <br />
+            </div>
+            <div>
+                <br />
+            </div>
+            <div>
+                <br />
+            </div>
+            <div>
+                <br />
+            </div>
+            <div>
+                <br />
+            </div>
+            <div>
+                <br />
+            </div>
             <div>
                 <br />
             </div>
