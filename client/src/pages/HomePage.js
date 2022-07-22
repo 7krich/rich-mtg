@@ -7,13 +7,13 @@ const Home = () => {
     const [show, setShow] = useState(true);
     const [lastScrollY, setLastScrollY] = useState(0);
   
-    const controlNavbar = () => {
+    const controlAbout = () => {
       if (typeof window !== 'undefined') { 
-        if (window.scrollY < 1050) { 
-            // if scroll down hide the navbar
+        if (window.scrollY < 1025) { 
+            // if scroll down hide the about text
             setShow(false); 
         } else { 
-            // if scroll up show the navbar
+            // if scroll up show the about text
             setShow(true);  
         }
   
@@ -21,14 +21,29 @@ const Home = () => {
         setLastScrollY(window.scrollY); 
       }
     };
+
+    const controlNavbar = () => {
+        if (typeof window !== 'undefined') { 
+          if (window.scrollY < 1025) { 
+              // if scroll down hide the about text
+              setShow(false); 
+          } else { 
+              // if scroll up show the about text
+              setShow(true);  
+          }
+    
+          // remember current page location to use in the next move
+          setLastScrollY(window.scrollY); 
+        }
+      };
   
     useEffect(() => {
       if (typeof window !== 'undefined') {
-        window.addEventListener('scroll', controlNavbar);
+        window.addEventListener('scroll', controlAbout);
   
         // cleanup function
         return () => {
-          window.removeEventListener('scroll', controlNavbar);
+          window.removeEventListener('scroll', controlAbout);
         };
       }
     }, [lastScrollY]);
@@ -100,11 +115,6 @@ const Home = () => {
                 </a>
             </div>
             <div id="aboutme">
-                <div className="personal-photo">
-
-                </div>
-            </div>
-            <div>
                 <div className="about">
                     <div className="profile-container">
                         <img className="profile-pic"
@@ -114,12 +124,12 @@ const Home = () => {
                     </div>
 
                     <section className="about-us">
-                        <div className={`visible ${show && 'hide'}`}>
+                        <div>
                             <p>
-                                Welcome to Rich Services! With over 5 years of loan origination and underwriting experience we are a broker you can trust.  
+                                Welcome to Rich Services! With over 5 years of loan origination and underwriting experience, we are a broker you can trust.  
                             </p>
                             <p>
-                                Purchase, Refinance, Conventional, VA & FHA we are here to make the process quick and painless by letting you know what to expect from first contact to closing.
+                                Purchase, Refinance, Conventional, VA & FHA - we are here to make the process quick and painless by letting you know what to expect from first contact to closing.
                             </p>
                             <p>
                                 Work with us & we will work for you.
@@ -129,53 +139,56 @@ const Home = () => {
                 </div>
             </div>
 
-            <div>
-                <br />
-            </div>
-            <div>
-                <br />
-            </div>
-            <div>
-                <br />
-            </div>
-            <div>
-                <br />
-            </div>
-            <div>
-                <br />
-            </div>
-            <div>
-                <br />
-            </div>
-            <div>
-                <br />
-            </div>
-            <div>
-                <br />
-            </div>
-            <div>
-                <br />
-            </div>
-            <div>
-                <br />
-            </div>
-            <div>
-                <br />
-            </div>
-            <div>
-                <br />
-            </div>
-            <div>
-                <br />
-            </div>
-            <div>
-                <br />
-            </div>
-            <div>
-                <br />
-            </div>
-            <div>
-                <br />
+            <div id="news">
+                <h1 className="news-title">
+                    News
+                </h1>
+
+                <div className="rate-news">
+                    <section className="rate-box">
+                        <div className="todays-rates">
+                            <div className="conv">
+                                Fannie mae 30 yr Index - 5.75%
+                            </div>
+                            <div className="va">
+                                VA 30 yr Index - 5.25%
+                            </div>
+                            <div className="fha">
+                                FHA 30 yr Index - 5.375%
+                            </div>
+                        </div>
+                    </section>
+                </div>
+                <div className="mtg-news">
+                    <section className="mtg-box">
+                        <div className="mtg-week">
+                            <div className="article-title">
+                                Article Title
+                            </div>
+                            <div className="article-text">
+                                Lorem Ipsum
+                            </div>
+                            <div className="article-title">
+                                Article Title
+                            </div>
+                            <div className="article-text">
+                                Lorem Ipsum
+                            </div>
+                            <div className="article-title">
+                                Article Title
+                            </div>
+                            <div className="article-text">
+                                Lorem Ipsum
+                            </div>
+                            <div className="article-title">
+                                Article Title
+                            </div>
+                            <div className="article-text">
+                                Lorem Ipsum
+                            </div>
+                        </div>
+                    </section>
+                </div>
             </div>
         </main>
     )
