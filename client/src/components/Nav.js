@@ -2,16 +2,11 @@ import React, { useState, useEffect } from 'react';
 // import { capitalizeFirstLetter } from '../utils/helpers';
 import Hamburger from './Hamburger';
 import NavActive from './NavActive';
-import { Transition } from 'react-transition-group';
 
 const Nav = (props) => {
 
     const [hamburgerOpen, setHamburgerOpen] = useState(false);
     const [isOvalShown, setIsOvalShown] = useState(false);
-
-    const toggleHamburger = () => {
-        setHamburgerOpen(!hamburgerOpen)
-    }
 
     //show nav on scroll below main sing up/app form
     const [show, setShow] = useState(true);
@@ -56,22 +51,12 @@ const Nav = (props) => {
                     <NavActive></NavActive>
                 </div>
             )}
-                <div className="hamburger" onClick={toggleHamburger}>
-                    <Hamburger isOpen={hamburgerOpen}/>
-                </div>
 
                 <style jsx>{`
-                @media screen and (max-width: 2000px) {
+                @media screen and (max-width: 9000px) {
                     .nav-hover {
                         display: ${isOvalShown ? 'none' : 'inline'};
-                        transition-duration: ${isOvalShown ? '2s' : '2s'};
                     }
-                    .nav-row ul {
-                        display: ${hamburgerOpen ? 'inline' : 'none'};
-                }
-                    footer p {
-                        display: ${hamburgerOpen ? 'inline' : 'none'};
-                }
                 `}</style>
             </nav>
         </header>
