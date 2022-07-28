@@ -40,25 +40,27 @@ const Nav = (props) => {
 
     return(
         <header className={`active ${show && 'hidden'}`}>
-            <nav className="dynamic-nav"
-                onMouseEnter={() => setIsOvalShown(true)}
-                onMouseLeave={() => setIsOvalShown(false)}
-            >
-            <div className="nav-hover">
-            </div>
-            {isOvalShown && (
-                <div className="nav-oval-active">
-                    <NavActive></NavActive>
+                <nav className="dynamic-nav"
+                    onMouseEnter={() => setIsOvalShown(true)}
+                    onMouseLeave={() => setIsOvalShown(false)}
+                >
+                <div className={isOvalShown ? `nav-box`: `nav-hover`}>
+                {isOvalShown && (
+                    <div className="nav-oval-active">
+                        <NavActive></NavActive>
+                    </div>
+                )}
                 </div>
-            )}
 
-                <style jsx>{`
-                @media screen and (max-width: 9000px) {
-                    .nav-hover {
-                        display: ${isOvalShown ? 'none' : 'inline'};
-                    }
-                `}</style>
-            </nav>
+                    <style jsx>{`
+                    @media screen and (max-width: 9000px) {
+                        .nav-hover {
+                            display: ${isOvalShown ? 'none' : 'inline'};
+                        }
+                    `}</style>
+                    
+                </nav>
+            
         </header>
     );
 };

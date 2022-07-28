@@ -13,14 +13,13 @@ function NavActive ({ isOpen }) {
         <nav className="dynamic-nav">
             <>
                 <div className="nav-oval" >
-                    <div className="nav-box">
+                    <div>
+                        <div className="nav-row dynamic-flex">
                         <a href="/">
                             <h2 className="title">
                                 RICH SERVICES
                             </h2>
                         </a>
-                    
-                        <div className="nav-row dynamic-flex">
                             {Auth.loggedIn() ? (
                             <>
                                 <Link to="/profile" className="nav-link">Profile</Link>
