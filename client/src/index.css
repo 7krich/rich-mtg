@@ -59,6 +59,10 @@ code {
   margin-right: 0;
 }
 
+.dynamic-nav:hover {
+  transition-duration: 2s;
+}
+
 nav {
   margin-top: 34px;
 }
@@ -126,6 +130,10 @@ h2, .title {
   margin-top: 50px;
 }
 
+h2, .title {
+  cursor: default;
+}
+
 a:link {
   text-decoration: none;
 }
@@ -139,6 +147,15 @@ a:link {
   padding-right: 52px;
   padding-top: 4px;
   margin-top: 20px;
+  cursor: default;
+}
+
+.nav-link:hover {
+  transition: 0.5s;
+  color: rgb(11, 123, 174);   
+  font-weight: 700;
+  padding-right: 60px;
+  cursor: default;
 }
 
 /* active nav text */

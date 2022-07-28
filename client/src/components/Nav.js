@@ -64,6 +64,7 @@ const Nav = (props) => {
                 @media screen and (max-width: 2000px) {
                     .nav-hover {
                         display: ${isOvalShown ? 'none' : 'inline'};
+                        transition-duration: ${isOvalShown ? '2s' : '2s'};
                     }
                     .nav-row ul {
                         display: ${hamburgerOpen ? 'inline' : 'none'};
