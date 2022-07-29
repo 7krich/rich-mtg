@@ -96,13 +96,12 @@ nav {
   clip-path: polygon(10% 0, 100% 0, 100% 100%, 0 0%);
   background-image: linear-gradient(to top right, #ffffff, #ffffff48);
   box-shadow: rgb(100, 100, 111) 0px 7px 29px 0px;
-  font-size: 6rem;
 }
 
-svg {
-  transform: rotate(90deg);
-  padding-right: 60px;
-  padding-bottom: 60px;
+.menu-icon svg {
+  padding-left: 70px;
+  padding-top: 12px;
+  font-size: 4rem;
 }
 
 /* nav text */

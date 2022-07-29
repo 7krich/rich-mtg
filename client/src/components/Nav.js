@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 // import { capitalizeFirstLetter } from '../utils/helpers';
-import { CgMenuMotion } from "react-icons/cg";
+import { HiOutlineMenuAlt3 } from "react-icons/hi";
 import NavActive from './NavActive';
 
 const Nav = (props) => {
@@ -50,7 +50,9 @@ const Nav = (props) => {
                         <NavActive></NavActive>
                     </div>
                 ) : (
-                    <CgMenuMotion></CgMenuMotion>
+                    <div className="menu-icon">
+                        <HiOutlineMenuAlt3></HiOutlineMenuAlt3>
+                    </div>
                 )}
                 </div>
 
