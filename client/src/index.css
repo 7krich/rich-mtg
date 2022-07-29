@@ -12,7 +12,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-image: linear-gradient(to bottom, rgb(255, 255, 255), rgb(184, 240, 255));
+  background-image: linear-gradient(to bottom, rgb(255, 255, 255), rgb(207, 235, 255));
 }
 
 code {
@@ -84,9 +84,9 @@ nav {
   flex-direction: column;
   width: 550px;
   height: 660px;
-  background-image: linear-gradient(to top right, #ffffff, #c6e6fef1);
+  background-image: linear-gradient(to top right, #ffffff, #e6f4fff5);
   clip-path: polygon(10% 0, 100% 0, 100% 100%, 0 0%);
-  transition-duration: 1s;
+  transition-duration: .25s;
 }
 
 /* closed navigation styles */
@@ -96,7 +96,13 @@ nav {
   clip-path: polygon(10% 0, 100% 0, 100% 100%, 0 0%);
   background-image: linear-gradient(to top right, #ffffff, #ffffff48);
   box-shadow: rgb(100, 100, 111) 0px 7px 29px 0px;
-  font-display: none;
+  font-size: 6rem;
+}
+
+svg {
+  transform: rotate(90deg);
+  padding-right: 60px;
+  padding-bottom: 60px;
 }
 
 /* nav text */
@@ -141,14 +147,15 @@ a:link {
   padding-top: 4px;
   margin-top: 20px;
   cursor: default;
+  font-weight: 600;
 }
 
 .nav-link:hover {
   transition: 0.5s;
-  color: rgb(11, 123, 174);   
-  font-weight: 700;
-  width: 112%;
+  color: rgb(57, 172, 226);   
   cursor: default;
+  text-shadow: rgb(100, 100, 111) 0px 7px 29px 0px;
+
 }
 
 /* active nav text */
@@ -356,7 +363,6 @@ a .aboutme {
 }
 
 .about-us {
-  padding-top: 10%;
   font-size: 30px;
   width: 50%;
   margin: auto;
@@ -369,14 +375,13 @@ a .aboutme {
 .profile-container {
   width: 40%;
   margin-right: auto;
-  margin-top: 5%;
+  margin-top: 0;
   margin-bottom: auto;
 }
 
 .profile-pic {
   clip-path: polygon(0 0, 100% 0, 50% 100%, 0 100%);
   width: 100%;
-  margin-top: 40px;
 }
 
 .profile-pic, .img {

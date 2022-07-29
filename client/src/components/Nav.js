@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 // import { capitalizeFirstLetter } from '../utils/helpers';
-import Hamburger from './Hamburger';
+import { CgMenuMotion } from "react-icons/cg";
 import NavActive from './NavActive';
 
 const Nav = (props) => {
@@ -14,7 +14,7 @@ const Nav = (props) => {
   
     const controlNavbar = () => {
       if (typeof window !== 'undefined') { 
-        if (window.scrollY > 700) { 
+        if (window.scrollY > 740) { 
             // if scroll down hide the navbar
             setShow(false); 
         } else { 
@@ -45,10 +45,12 @@ const Nav = (props) => {
                     onMouseLeave={() => setIsOvalShown(false)}
                 >
                 <div className={isOvalShown ? `nav-box`: `nav-hover`}>
-                {isOvalShown && (
+                {isOvalShown ? (
                     <div className="nav-oval-active">
                         <NavActive></NavActive>
                     </div>
+                ) : (
+                    <CgMenuMotion></CgMenuMotion>
                 )}
                 </div>
 
