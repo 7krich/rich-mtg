@@ -135,7 +135,7 @@ const Home = () => {
                             <div className="todays-rates">
                                 <div className="index">
                                     <div className="rate-type">
-                                        Fannie mae 30 yr Index
+                                        Fannie Mae 30 yr Index
                                     </div>
                                     <div className="rate">
                                         5.25%
