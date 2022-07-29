@@ -19,6 +19,7 @@
     "url": "https://github.com/7krich/rich-mtg/issues"
   },
   "dependencies": {
-    "concurrently": "^7.3.0"
+    "concurrently": "^7.3.0",
+    "gh-pages": "^4.0.0"
   }
 }
