@@ -4,8 +4,7 @@ import { HiOutlineMenuAlt3 } from "react-icons/hi";
 import NavActive from './NavActive';
 
 const Nav = (props) => {
-
-    const [hamburgerOpen, setHamburgerOpen] = useState(false);
+    // state variable for open nav
     const [isOvalShown, setIsOvalShown] = useState(false);
 
     //show nav on scroll below main sing up/app form

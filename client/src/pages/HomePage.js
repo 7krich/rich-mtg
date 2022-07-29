@@ -133,14 +133,29 @@ const Home = () => {
                     <div className="rate-news">
                         <section className="rate-box">
                             <div className="todays-rates">
-                                <div className="conv">
-                                    Fannie mae 30 yr Index - 5.75%
+                                <div className="index">
+                                    <div className="rate-type">
+                                        Fannie mae 30 yr Index
+                                    </div>
+                                    <div className="rate">
+                                        5.25%
+                                    </div>
                                 </div>
-                                <div className="va">
-                                    VA 30 yr Index - 5.25%
+                                <div className="index">
+                                    <div className="rate-type">
+                                        VA 30 yr Index
+                                    </div>
+                                    <div className="rate">
+                                        4.875%
+                                    </div>
                                 </div>
-                                <div className="fha">
-                                    FHA 30 yr Index - 5.375%
+                                <div className="index">
+                                    <div className="rate-type">
+                                        FHA 30 yr Index
+                                    </div>
+                                    <div className="rate">
+                                        4.99%
+                                    </div>
                                 </div>
                             </div>
                         </section>

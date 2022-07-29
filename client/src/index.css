@@ -151,10 +151,9 @@ a:link {
 
 .nav-link:hover {
   transition: 0.5s;
-  color: rgb(57, 172, 226);   
+  color: rgb(9, 130, 182);   
   cursor: default;
   text-shadow: rgb(100, 100, 111) 0px 7px 29px 0px;
-
 }
 
 /* active nav text */
@@ -401,6 +400,53 @@ a .aboutme {
 /* news title */
 .news-title {
   padding-top: 60px;
+}
+
+/* rate styles */
+.rate-box {
+  border-radius: 50px;
+  width: 60%;
+  margin: auto;
+  background: white;
+  border: 1px solid rgba(128, 128, 128, 0.344);
+  box-shadow: rgba(100, 100, 111, 0.72) 0px 7px 29px 0px;
+  margin-top: 40px;
+}
+
+.todays-rates {
+  border-radius: 20px;
+  width: 90%;
+  margin: auto;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.index {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 30px 0 30px 0;
+}
+
+.rate-type {
+  margin-top: 50px;
+  margin-left: 20px;
+  font-weight: 700;
+  font-size: 1.75rem;
+}
+
+.rate {
+  border: 2px solid rgb(20, 157, 118);
+  background-image: linear-gradient(to top right, #dceffd19, #97d0fd33);
+  box-shadow: rgba(100, 100, 111, 0.72) 0px 7px 10px 0px;
+  border-radius: 30px;
+  width: 20%;
+  padding: 40px 20px 40px 20px;
+  text-align: center;
+  margin-right: 20px;
+  font-weight: 700;
+  font-size: 2rem;
+  color: rgb(4, 152, 92);
 }
 
 /* footer styles */
