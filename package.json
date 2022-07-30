@@ -1,6 +1,5 @@
 {
   "name": "rich-mtg",
-  "homepage": "http://7krich.github.io/rich-mtg",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -20,7 +19,6 @@
     "url": "https://github.com/7krich/rich-mtg/issues"
   },
   "dependencies": {
-    "concurrently": "^7.3.0",
-    "gh-pages": "^4.0.0"
+    "concurrently": "^7.3.0"
   }
 }

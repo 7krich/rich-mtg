@@ -1,11 +1,14 @@
 import React, { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import Auth from '../utils/auth';
 
-import Login from '../components/Login'
+// components
+import Login from '../components/Login';
 
 const Home = () => {
     const [show, setShow] = useState(true);
     const [lastScrollY, setLastScrollY] = useState(0);
+    const navigate = useNavigate();
   
     const controlAbout = () => {
       if (typeof window !== 'undefined') { 
@@ -32,6 +35,11 @@ const Home = () => {
         };
       }
     }, [lastScrollY]);
+
+    const navigateToApp = () => {
+        //navigate to App Funnel
+        navigate('/app');
+    };
 
     return (
         <main>
@@ -85,7 +93,7 @@ const Home = () => {
                                     type="email"
                                     id="email"
                                 />
-                                <button className="sub-btn x-pad" type="submit">
+                                <button className="sub-btn x-pad" type="submit" onClick={navigateToApp}>
                                     Submit
                                 </button>
                             </form>

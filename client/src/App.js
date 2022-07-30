@@ -12,6 +12,7 @@ import SignupPage from './pages/SignupPage';
 import ProfilePage from './pages/ProfilePage';
 import AboutPage from './pages/AboutPage';
 import NewsPage from './pages/NewsPage';
+import AppFunnel from './pages/AppFunnel';
 import NoMatch from './pages/NoMatch';
 
 function App() {
@@ -44,6 +45,10 @@ function App() {
           <Route 
             path="/news" 
             element={<NewsPage />} 
+          />
+          <Route 
+            path="/app" 
+            element={<AppFunnel />} 
           />
           <Route 
             path="*" 
