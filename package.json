@@ -4,9 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node server/server.js",
     "build": "react-scripts build",
-    "develop": "concurrently \"cd server && npm run watch\" \"cd client && npm start\"",
+    "develop": "cd client && npm start",
     "install": "cd server && npm i && cd ../client && npm i"
   },
   "repository": {
