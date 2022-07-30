@@ -299,6 +299,14 @@ a .aboutme {
   border-image-slice: 1;
 }
 
+/* more info error text */
+.error-text {
+  color: red;
+  font-style: italic;
+  text-align: center;
+  font-family: 'Didact Gothic', sans-serif;
+}
+
 /* homepage buttons */
 .sub-btn {
   background-image: linear-gradient(92.88deg, #455EB5 9.16%, #4371cc 43.89%, #3f88d7 64.72%);

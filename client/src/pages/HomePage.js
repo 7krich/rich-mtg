@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { validateEmail } from '../utils/helpers';
 import Auth from '../utils/auth';
 
 // components
@@ -41,6 +42,44 @@ const Home = () => {
         navigate('/app');
     };
 
+    // form logic
+    const [formState, setFormState] = useState({ firstName: '', lastName: '', email: '' });
+    const { firstName, lastName, email } = formState;
+    const [errorMessage, setErrorMessage] = useState('');
+
+    // sync the internal state of the component formState with the user input from the DOM
+    // onChange event listener will ensure that the handleChange function fires when keystroke is typed into input field
+    function handleChange(e) {
+        // validate e-mail
+        if (e.target.name === 'email') {
+            const isValid = validateEmail(e.target.value);
+            // isValid conditional statement
+            if(!isValid) {
+                setErrorMessage('Your email is invalid');
+            } else {
+                // if valid, err msg is empty string
+                setErrorMessage('');
+            }
+        } else {
+            // if message or name element values are blank
+            if(!e.target.value.length) {
+                // send err msg
+                setErrorMessage(`${e.target.name} is required`);
+                // if not empty, err msg is empty string
+            } else {
+                setErrorMessage('');
+            }
+
+            if (!errorMessage) {
+                setFormState({ ...formState, [e.target.name]: e.target.value });
+            }
+        }
+        
+        // dynamically obtain keystrokes from each given form element
+        // e.target.name -> name refers to the name attribute for the form elements (name, email, message)
+        setFormState({...formState, [e.target.name]: e.target.value })
+    }
+
     return (
         <main>
             <div className="container1">
@@ -78,6 +117,7 @@ const Home = () => {
                                     name="First Name"
                                     type="First Name"
                                     id="firstName"
+                                    defaultValue={firstName} firstName="firstName" onBlur={handleChange}
                                 />
                                 <input
                                     className="form-input"
@@ -85,6 +125,7 @@ const Home = () => {
                                     name="Last Name"
                                     type="Last Name"
                                     id="lastName"
+                                    defaultValue={lastName} lastName="lastName" onBlur={handleChange}
                                 />
                                 <input
                                     className="form-input"
@@ -92,7 +133,13 @@ const Home = () => {
                                     name="email"
                                     type="email"
                                     id="email"
+                                    defaultValue={email} email="email" onBlur={handleChange}
                                 />
+                                {errorMessage && (
+                                    <div>
+                                        <p className="error-text">{errorMessage}</p>
+                                    </div>
+                                )}
                                 <button className="sub-btn x-pad" type="submit" onClick={navigateToApp}>
                                     Submit
                                 </button>
