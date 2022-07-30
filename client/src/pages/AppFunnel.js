@@ -1,9 +1,14 @@
 import React from 'react';
+import { motion } from 'framer-motion';
 
 const AppFunnel = () => {
 
     return (
-        <div className="app-container">
+        <motion.div className="app-container"
+        // framer-motion page transition animation
+        animate={{ x: [200, 0] }}
+        transition={{ ease: "easeOut", duration: 2 }}
+        >
             <div className="app">
                 <h3 className="app-form-title">
                     Helpful Information
@@ -35,7 +40,7 @@ const AppFunnel = () => {
                     </button>
                 </form>
             </div>
-        </div>
+        </motion.div>
     )
 }
 

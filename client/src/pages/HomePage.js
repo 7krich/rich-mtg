@@ -2,41 +2,13 @@ import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { validateEmail } from '../utils/helpers';
 import Auth from '../utils/auth';
+import { motion } from 'framer-motion';
 
 // components
 import Login from '../components/Login';
 
 const Home = () => {
-    const [show, setShow] = useState(true);
-    const [lastScrollY, setLastScrollY] = useState(0);
     const navigate = useNavigate();
-  
-    const controlAbout = () => {
-      if (typeof window !== 'undefined') { 
-        if (window.scrollY < 1025) { 
-            // if scroll down hide the about text
-            setShow(false); 
-        } else { 
-            // if scroll up show the about text
-            setShow(true);  
-        }
-  
-        // remember current page location to use in the next move
-        setLastScrollY(window.scrollY); 
-      }
-    };
-  
-    useEffect(() => {
-      if (typeof window !== 'undefined') {
-        window.addEventListener('scroll', controlAbout);
-  
-        // cleanup function
-        return () => {
-          window.removeEventListener('scroll', controlAbout);
-        };
-      }
-    }, [lastScrollY]);
-
     const navigateToApp = () => {
         //navigate to App Funnel
         navigate('/app');
@@ -81,7 +53,12 @@ const Home = () => {
     }
 
     return (
-        <main>
+        <motion.main
+        // framer-motion page transition animation
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        exit={{ x: [-200, 200], ease: "easeOut", duration: 2 }}
+        >
             <div className="container1">
                 <div className="intro">
                     <h1>
@@ -247,7 +224,7 @@ const Home = () => {
                     </div>
                 </div>
             </div>
-        </main>
+        </motion.main>
     )
 }
 

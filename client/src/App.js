@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { BrowserRouter as Router } from 'react-router-dom';
 
 // import components
@@ -7,7 +7,6 @@ import Footer from './components/Footer'
 import AnimatedRoutes from './components/AnimatedRoutes'
 
 function App() {
-
   return (
     <div className="App">
       <Router>

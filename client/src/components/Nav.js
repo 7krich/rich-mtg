@@ -1,24 +1,36 @@
 import React, { useState, useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
 // import { capitalizeFirstLetter } from '../utils/helpers';
 import { HiOutlineMenuAlt3 } from "react-icons/hi";
 import NavActive from './NavActive';
 
 const Nav = (props) => {
+
+    const [homepage, setHomepage] = useState(0);
+    const [lastScrollY, setLastScrollY] = useState(0);
     // state variable for open nav
     const [isOvalShown, setIsOvalShown] = useState(false);
-
     //show nav on scroll below main sing up/app form
-    const [show, setShow] = useState(true);
-    const [lastScrollY, setLastScrollY] = useState(0);
-  
+    const [show, setShow] = useState(false);
+    const location = useLocation();
+    
+    useEffect(() => {
+        if (location.pathname === "/") {
+            setHomepage(740);
+        } else {
+            setHomepage(0);
+            setShow(true);
+        }
+    }, [location])
+
     const controlNavbar = () => {
       if (typeof window !== 'undefined') { 
-        if (window.scrollY > 740) { 
-            // if scroll down hide the navbar
-            setShow(false); 
+        if (window.scrollY > homepage) { 
+            // if scroll less than 740 px - no nav
+            setShow(true); 
         } else { 
-            // if scroll up show the navbar
-            setShow(true);  
+            // if scroll past 740 show nav
+            setShow(false);  
         }
   
         // remember current page location to use in the next move
@@ -38,7 +50,8 @@ const Nav = (props) => {
     }, [lastScrollY]);
 
     return(
-        <header className={`active ${show && 'hidden'}`}>
+
+        <header className={show ? `nav`: `nav no`}>
                 <nav className="dynamic-nav"
                     onMouseEnter={() => setIsOvalShown(true)}
                     onMouseLeave={() => setIsOvalShown(false)}
