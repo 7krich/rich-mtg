@@ -431,9 +431,8 @@ a .aboutme {
 .rate-type {
   text-align: center;
   padding-top: 40px;
-  padding-left: 30px;
   margin-left: 10px;
-  width: 60%;
+  width: 65%;
   font-weight: 700;
   font-size: 2rem;
   background-image: linear-gradient(to top right, #208374e4, #2877b8d6);
