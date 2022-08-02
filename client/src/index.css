@@ -20,7 +20,7 @@ code {
     monospace;
 }
 
-/* nav css */
+/* nav styles */
 .nav{
   width: 100%;
   padding: 0;
@@ -37,10 +37,8 @@ code {
   height: 4rem;
   width: 100%;
   z-index: 40;
-  position: fixed;
   top: -80px;
   display: none;
-  position: absolute !important;
 }
 
 .dashboard {
@@ -299,6 +297,35 @@ a .aboutme {
   border-image-slice: 1;
 }
 
+.drop-input {
+  padding: 15px 0 0;
+  margin-top: 10px;
+  font-family: inherit;
+  width: 100%;
+  border: 0;
+  outline: 0;
+  color: rgb(11, 123, 174);
+  font-size: 1.3rem;
+  font-weight: 700;
+  padding: 7px 0;
+  background: transparent;
+}
+
+select {
+  padding: 5px;
+  font-family: inherit;
+  background-color: var(--secondary);
+  color: white;
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+
+option {
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+
+
 /* more info error text */
 .error-text {
   color: red;
@@ -332,6 +359,10 @@ a .aboutme {
 
 .x-pad {
   margin-top: 20px;
+}
+
+.xb-marg {
+  margin-bottom: 80px;
 }
 
 .sub-btn:hover {
@@ -461,6 +492,15 @@ a .aboutme {
   font-weight: 700;
   font-size: 2rem;
   color: rgb(4, 152, 92);
+}
+
+/* app funnel page styles */
+.app-container {
+  margin-bottom: 6.21%;
+}
+
+.funnel {
+  width: 70%;
 }
 
 /* footer styles */

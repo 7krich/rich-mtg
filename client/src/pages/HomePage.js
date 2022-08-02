@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { validateEmail } from '../utils/helpers';
 import Auth from '../utils/auth';
-import { motion } from 'framer-motion';
+import AnimatedPage from './AnimatedPage';
 
 // components
 import Login from '../components/Login';
@@ -52,13 +52,9 @@ const Home = () => {
         setFormState({...formState, [e.target.name]: e.target.value })
     }
 
+    
     return (
-        <motion.main
-        // framer-motion page transition animation
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        exit={{ x: [-200, 200], ease: "easeOut", duration: 2 }}
-        >
+        <AnimatedPage>
             <div className="container1">
                 <div className="intro">
                     <h1>
@@ -224,7 +220,7 @@ const Home = () => {
                     </div>
                 </div>
             </div>
-        </motion.main>
+        </AnimatedPage>
     )
 }
 

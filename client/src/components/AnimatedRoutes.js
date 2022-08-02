@@ -15,9 +15,12 @@ import NoMatch from '../pages/NoMatch';
 
 const AnimatedRoutes = () => {
     const location = useLocation();
+
     return (
-        <AnimatePresence>
-            <Routes location={location} key={location.pathname}>
+        <AnimatePresence exitBeforeEnter>
+            <Routes
+            location={location} key={location.pathname}
+            >
                 <Route 
                     path="/" 
                     element={<HomePage />} 

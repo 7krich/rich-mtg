@@ -17,6 +17,7 @@ const Nav = (props) => {
     useEffect(() => {
         if (location.pathname === "/") {
             setHomepage(740);
+
         } else {
             setHomepage(0);
             setShow(true);
@@ -25,7 +26,7 @@ const Nav = (props) => {
 
     const controlNavbar = () => {
       if (typeof window !== 'undefined') { 
-        if (window.scrollY > homepage) { 
+        if (window.scrollY >= homepage) { 
             // if scroll less than 740 px - no nav
             setShow(true); 
         } else { 
