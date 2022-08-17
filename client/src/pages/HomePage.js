@@ -1,23 +1,28 @@
-import React, { useState, useEffect } from 'react';
-import { useNavigate } from 'react-router-dom';
+import React, { useState, useContext } from 'react';
+import { useNavigate, Link } from 'react-router-dom';
 import { validateEmail } from '../utils/helpers';
-import Auth from '../utils/auth';
+import UserContext from '../contexts/UserContext';
 import AnimatedPage from './AnimatedPage';
 
 // components
 import Login from '../components/Login';
 
-const Home = () => {
+const Home = ({ isLoggedIn, handleLogout}) => {
+    // navigate vars
     const navigate = useNavigate();
     const navigateToApp = () => {
         //navigate to App Funnel
         navigate('/app');
     };
 
-    // form logic
+    // form vars
     const [formState, setFormState] = useState({ firstName: '', lastName: '', email: '' });
     const { firstName, lastName, email } = formState;
     const [errorMessage, setErrorMessage] = useState('');
+
+    // login vars
+    const userContext = useContext(UserContext);
+    const { user } = userContext;
 
     // sync the internal state of the component formState with the user input from the DOM
     // onChange event listener will ensure that the handleChange function fires when keystroke is typed into input field
@@ -61,22 +66,33 @@ const Home = () => {
                         Home Loans Built for You.
                     </h1>
                 </div>
+                
                 {/* home form outer container */}
                 <div className="home-container">
-
                     {/* homepage login & sign up form */}
+                    
                     <div className="log-container">
                         <div className="sign-log">
-                            <Login />
+                            {
+                                !isLoggedIn
+                                ?
+                                <Login />
+                                :
+                                <p>
+                                    Hello
+                                </p>
+                            }
+                            
                         
                             <div className="signup-outer">
-                                <button className="signup-intro sub-btn">
-                                    Sign Up
-                                </button>
+                                <Link to ='/signup'>
+                                    <button className="signup-intro sub-btn">
+                                        Sign Up
+                                    </button>
+                                </Link>
                             </div>
                         </div>
                     </div>
-
                     {/* application form */}
                     <div className="log-container">
                         <div className="app">
