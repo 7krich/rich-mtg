@@ -18,6 +18,8 @@
     "url": "https://github.com/7krich/rich-mtg/issues"
   },
   "dependencies": {
-    "concurrently": "^7.3.0"
+    "concurrently": "^7.3.0",
+    "react-icons": "^4.4.0",
+    "react-vertical-timeline-component": "^3.5.2"
   }
 }

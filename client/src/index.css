@@ -551,6 +551,12 @@ option {
   padding-right: 30px;
 }
 
+/* about me styles */
+.date-class {
+  color: black;
+  font-weight: bolder;
+}
+
 /* media queries */
 @media (min-width: 768px) {
   .sub-btn {
