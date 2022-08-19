@@ -1,5 +1,5 @@
 import React from 'react';
-import { IoMdSchool } from 'react-icons/io';
+import { IoMdSchool, IoIosRocket } from 'react-icons/io';
 import { AiFillBank } from 'react-icons/ai';
 import { VerticalTimeline, VerticalTimelineElement }  from 'react-vertical-timeline-component';
 import 'react-vertical-timeline-component/style.min.css';
@@ -7,48 +7,51 @@ import 'react-vertical-timeline-component/style.min.css';
 const About = () => {
     return (
         <main>
+            <div className="intro">
+                <h1 className="header">
+                    Our Story
+                </h1>
+            </div>
             <VerticalTimeline
-                lineColor={ 'rgb(11, 123, 174)' }
+                lineColor={ 'rgb(74, 74, 74)' }
             >
                 <VerticalTimelineElement
                     className="vertical-timeline-element--school"
-                    contentStyle={{ background: 'rgb(11, 123, 174)', color: 'white', 'border-radius': '25px' }}
-                    contentArrowStyle={{ borderRight: '7px solid  rgb(11, 123, 174)' }}
+                    contentStyle={{ background: 'rgb(2, 170, 161)', color: 'white', 'border-radius': '25px' }}
+                    contentArrowStyle={{ borderRight: '7px solid  rgb(2, 170, 161)' }}
                     date="2016 - 2018"
                     dateClassName={ 'date-class' }
-                    iconStyle={{ background: 'rgb(11, 123, 174)', color: '#fff' }}
+                    iconStyle={{ background: 'rgb(2, 170, 161)', color: '#fff' }}
                     icon={<IoMdSchool />}
                 >
-                <h3 className="vertical-timeline-element-title">Bachelors of Arts, Economics</h3>
-                <h4 className="vertical-timeline-element-subtitle">University of Maryland - College Park</h4>
-                <h4 className="vertical-timeline-element-subtitle">Minor - Sustainability</h4>
+                <h3 className="vertical-timeline-element-title">University of Maryland - College Park</h3>
                 <p>
-                    Financial Markets, Business Statistics, Economic Geography, Game Theory, 
-                </p>
-                <p>
-                    The university laid a foundation of knowledge that expands beyond financial markets. This helped instill fundamental values of cost benefit analysis on an individual and market level. Human decision making is driven by incentives. These incentives lead our core values of doing right by our clients so they come back and enjoy their experience. It also ensures that we help you make the right moves during life's most important moments.
+                    Our founder, Kyle Richnafsky, completes a Bachelors Degree in Economics which lays a foundation of financial literacy and efficient decision-making. The experiences here expand beyond financial markets by instilling the fundamental values of cost benefit analysis on an individual and market level. It's made abundantly clear that human decision making is driven by incentives. These incentives lead our core values of doing right by our clients, so they come back and enjoy their experience. It also ensures that we help you make the right moves during life's most important moments.
                 </p>
             </VerticalTimelineElement>
                 <VerticalTimelineElement
                     className="vertical-timeline-element--work"
+                    contentStyle={{ background: 'rgb(11, 123, 174)', color: 'white', 'border-radius': '25px' }}
+                    contentArrowStyle={{ borderRight: '7px solid  rgb(11, 123, 174)' }}
                     date="2018 - 2020"
+                    dateClassName={ 'date-class' }
                     iconStyle={{ background: 'rgb(11, 123, 174)', color: '#fff' }}
                     icon={<AiFillBank />}
                 >
                 <h3 className="vertical-timeline-element-title">Mortgage Loan Originator</h3>
                 <h4 className="vertical-timeline-element-subtitle">NewDay USA</h4>
                 <p>
-                    Processed and closed over $1.5 million in loan volume monthly.
-                </p>
-                <p>
-                    Spent over a year working on a dedicated team working to restructure and revive loans that were denied or withdrawn previously.
+                    Kyle's first foray into mortgage lending provided experiences good and bad. This was a career springboard and a positive experience, but not a place to spend a lifetime. During this time Kyle encountered new clients and processed loans with efficiency. Spending the full life cycle of a loan with the client was a positive experience and provided a deeper understanding of the do's and dont's in the mortgage industry. Here he also spent over a year working on a dedicated team working to restructure and revive loans that were previously denied or withdrawn. This means we know the guidelines in and out, how to identify common pitfalls and solve obstacles that arise.
                 </p>
             </VerticalTimelineElement>
                 <VerticalTimelineElement
                     className="vertical-timeline-element--work"
-                    date="2020 - 2022"
-                    iconStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
-                    icon={<AiFillBank />}
+                    contentStyle={{ background: 'rgb(2, 170, 161)', color: 'white', 'border-radius': '25px' }}
+                    contentArrowStyle={{ borderRight: '7px solid  rgb(2, 170, 161)' }}
+                    date="2020 - 2021"
+                    dateClassName={ 'date-class' }
+                    iconStyle={{ background: 'rgb(2, 170, 161)', color: '#fff' }}
+                    icon={<IoIosRocket />}
                 >
                 <h3 className="vertical-timeline-element-title">Senior Banker</h3>
                 <h4 className="vertical-timeline-element-subtitle">Rocket Mortgage</h4>
@@ -58,12 +61,15 @@ const About = () => {
             </VerticalTimelineElement>
                 <VerticalTimelineElement
                     className="vertical-timeline-element--work"
-                    date="2006 - 2008"
-                    iconStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
-                    icon={<IoMdSchool />}
+                    contentStyle={{ background: 'rgb(2, 170, 161)', color: 'white', 'border-radius': '25px' }}
+                    contentArrowStyle={{ borderRight: '7px solid  rgb(2, 170, 161)' }}
+                    date="2021 - 2022"
+                    dateClassName={ 'date-class' }
+                    iconStyle={{ background: 'rgb(2, 170, 161)', color: '#fff' }}
+                    icon={<IoIosRocket />}
                 >
-                <h3 className="vertical-timeline-element-title">Web Designer</h3>
-                <h4 className="vertical-timeline-element-subtitle">San Francisco, CA</h4>
+                <h3 className="vertical-timeline-element-title">Credit Underwriter</h3>
+                <h4 className="vertical-timeline-element-subtitle">Rocket Mortgage</h4>
                 <p>
                 User Experience, Visual Design
                 </p>

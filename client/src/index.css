@@ -9,7 +9,7 @@ body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+    sans-serif!important;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-image: linear-gradient(to bottom, rgb(255, 255, 255), rgb(207, 235, 255));
@@ -554,7 +554,12 @@ option {
 /* about me styles */
 .date-class {
   color: black;
-  font-weight: bolder;
+  font-weight: bolder!important;
+  font-size: 18px!important;
+}
+
+.header {
+  padding-bottom: 60px;
 }
 
 /* media queries */
